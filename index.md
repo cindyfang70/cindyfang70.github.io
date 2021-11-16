@@ -1,2 +1,3 @@
 ## Hi, I'm Cindy
-I'm an undergrad at the University of Toronto.
+I'm a fourthy-year undergrad studying Bioinformatics and Computational Biology at the University of Toronto.
+
