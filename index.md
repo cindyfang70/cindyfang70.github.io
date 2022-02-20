@@ -9,7 +9,7 @@ Currently, I'm completing my fourth-year project course under the supervision of
 
 In the fall, I will be starting my PhD in Biostatistics at the Johns Hopkins Bloomberg School of Public Health.
 
-## Fun Stuff
+## Fun Stuff 🤸
 I enjoy cooking, reading, and biking around Toronto.
 
 [Our kombucha recipe](https://docs.google.com/document/d/17-y1aje0G3_frGPQ19gTvn_KQTNQhOXVivYRufM-Fx8/edit#heading=h.qvzb50vfgyzg), by me and [Jeffrey Im](https://www.math.toronto.edu/jim/), but mostly Jeffrey.
