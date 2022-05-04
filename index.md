@@ -8,3 +8,8 @@ I'm a fourth-year undergrad studying [Bioinformatics and Computational Biology](
 Currently, I'm completing my fourth-year project course under the supervision of [Kieran Campbell](https://www.camlab.ca/). My project involves evaluating and predicting scRNA-seq clustering pipeline performance.
 
 In the fall, I will be starting my PhD in Biostatistics at the Johns Hopkins Bloomberg School of Public Health.
+
+## Contact me 📞
+xinzhi _dot_ fang _at_ mail _dot_ utoronto _dot_ ca
+
+[My twitter](https://twitter.com/findycang)
