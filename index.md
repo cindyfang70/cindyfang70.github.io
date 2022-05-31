@@ -13,4 +13,5 @@ In the fall, I will be starting my PhD in Biostatistics at the Johns Hopkins Blo
 xinzhi _dot_ fang _at_ mail _dot_ utoronto _dot_ ca
 
 [Twitter](https://twitter.com/_cindyfang)
+
 [LinkedIn](https://www.linkedin.com/in/cindy-f-a887a2138/)
