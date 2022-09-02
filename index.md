@@ -3,15 +3,16 @@
 <img src="websitepic.png" alt="drawing" width="200"/>
 </p>
 
-I'm a fourth-year undergrad studying [Bioinformatics and Computational Biology](https://bcb.csb.utoronto.ca/) at the University of Toronto. I'm interested in developing computational/statistical methods for single-cell data analysis.
+I'm a first-year Biostatistics PhD student at the Johns Hopkins Bloomberg School of Public Health. I'm interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data.
 
-Currently, I'm completing my fourth-year project course under the supervision of [Kieran Campbell](https://www.camlab.ca/). My project involves evaluating and predicting scRNA-seq clustering pipeline performance.
+In undergrad, I studied  [Bioinformatics and Computational Biology](https://bcb.csb.utoronto.ca/) at the University of Toronto. There, I worked on  evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of  [Kieran Campbell](https://www.camlab.ca/). 
 
-In the fall, I will be starting my PhD in Biostatistics at the Johns Hopkins Bloomberg School of Public Health.
+In July 2022, I presented the above work at BioC2022. The recording can be found [here](https://youtu.be/AkElObGncWE).
+
 
 ## Contact me 📞
-xinzhi _dot_ fang _at_ mail _dot_ utoronto _dot_ ca
+xfang23_at_jhu_dot_edu
 
-[Twitter](https://twitter.com/_cindyfang)
+[Twitter](https://twitter.com/findycang)
 
 [LinkedIn](https://www.linkedin.com/in/cindy-f-a887a2138/)
