@@ -7,7 +7,7 @@ I'm a first-year Biostatistics PhD student at the Johns Hopkins Bloomberg School
 
 In undergrad, I studied  [Bioinformatics and Computational Biology](https://bcb.csb.utoronto.ca/) at the University of Toronto. There, I worked on  evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of  [Kieran Campbell](https://www.camlab.ca/). 
 
-In July 2022, I presented the above work at BioC2022. The recording can be found [here](https://youtu.be/AkElObGncWE).
+In July 2022, I presented the above work at [BioC2022](https://bioc2022.bioconductor.org/). The recording can be found [here](https://youtu.be/AkElObGncWE).
 
 
 ## Contact me 📞
