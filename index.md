@@ -3,7 +3,7 @@
 <img src="websitepic.png" alt="drawing" width="200"/>
 </p>
 
-I'm a first-year Biostatistics PhD student at the Johns Hopkins Bloomberg School of Public Health. I'm interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data under the supervision of [Stephanie Hicks](https://www.stephaniehicks.com/).
+I'm a first-year [Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) PhD student at the Johns Hopkins Bloomberg School of Public Health. I'm interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data under the supervision of [Stephanie Hicks](https://www.stephaniehicks.com/).
 
 In undergrad, I studied  [Bioinformatics and Computational Biology](https://bcb.csb.utoronto.ca/) at the University of Toronto. There, I worked on  evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of  [Kieran Campbell](https://www.camlab.ca/). 
 
