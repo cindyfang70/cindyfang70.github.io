@@ -1,0 +1,16 @@
+project:
+  type: website
+
+website:
+  title: "Cindy Fang"
+  navbar:
+    left:
+      - href: index.qmd
+        text: home
+      - blog.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
