@@ -1,23 +1,23 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Cindy Fang",
     "section": "",
-    "text": "I’m a first-year Biostatistics PhD student at the Johns Hopkins Bloomberg School of Public Health. I’m interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data under the supervision of Stephanie Hicks.\nIn undergrad, I studied Bioinformatics and Computational Biology at the University of Toronto. There, I worked on evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of Kieran Campbell.\nIn July 2022, I presented the above work at BioC2022. The recording can be found here."
+    "text": "I’m a third-year Biostatistics PhD candidate at the Johns Hopkins Bloomberg School of Public Health. I’m interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data under the supervision of Stephanie Hicks. In undergrad, I studied Bioinformatics and Computational Biology at the University of Toronto. There, I worked on evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of Kieran Campbell."
   },
   {
     "objectID": "index.html#hi-im-cindy",
     "href": "index.html#hi-im-cindy",
     "title": "Cindy Fang",
     "section": "",
-    "text": "I’m a first-year Biostatistics PhD student at the Johns Hopkins Bloomberg School of Public Health. I’m interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data under the supervision of Stephanie Hicks.\nIn undergrad, I studied Bioinformatics and Computational Biology at the University of Toronto. There, I worked on evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of Kieran Campbell.\nIn July 2022, I presented the above work at BioC2022. The recording can be found here."
-  },
-  {
-    "objectID": "index.html#contact-me",
-    "href": "index.html#contact-me",
-    "title": "Cindy Fang",
-    "section": "Contact me 📞",
-    "text": "Contact me 📞\nxfang23_at_jhu_dot_edu\nTwitter\nLinkedIn"
+    "text": "I’m a third-year Biostatistics PhD candidate at the Johns Hopkins Bloomberg School of Public Health. I’m interested in developing statistical methods for the analysis of single cell and spatial transcriptomics data under the supervision of Stephanie Hicks. In undergrad, I studied Bioinformatics and Computational Biology at the University of Toronto. There, I worked on evaluating and predicting scRNA-seq clustering pipeline performance under the supervision of Kieran Campbell."
   }
 ]
