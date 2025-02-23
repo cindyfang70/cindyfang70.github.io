@@ -4,7 +4,7 @@ description: "My experience with the preliminary oral exam"
 author:
   - name: Cindy Fang
     affiliation: Johns Hopkins Bloomberg School of Public Health
-date: 2025-01-13
+date: 2025-02-23
 categories: [oral exam, studying]  
 draft: false
 ---
