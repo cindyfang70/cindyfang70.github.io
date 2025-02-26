@@ -7,7 +7,11 @@ author:
 date: 2025-02-23
 categories: [oral exam, studying]  
 draft: false
+bibliography: references.bib 
+nocite: |
+  @*
 ---
+
 The Biostatistics PhD program at Johns Hopkins has several major requirements throughout the five-year degree. In the first year, students are required to take coursework and write the comprehensive exam at the end of the four terms. In the third year, students take the preliminary oral exam to advance to candidacy. Finally, in the fifth year, students defend their theses. This blog post is about the preliminary oral exam.
 
 # What is the preliminary oral exam?
@@ -45,3 +49,9 @@ After I had answered all the questions, my committee asked me to wait outside th
 # Closing thoughts
 
 A common piece of advice (or perhaps consolation) that I heard often leading up to the exam is something along the lines of "You don't need to stress, you know much more than you think you do!". While I appreciate the sentiment and the goodwill behind these words, I found out while studying that sometimes you know much _less_ than you think you do. In my honest opinion, you really do need to take the exam seriously and dedicate a substantial amount of time to studying, if not for the knowledge then at least for the confidence boost. Aside from the exam itself, I realized there were major gaps in my knowledge of the literature that I am grateful I filled while studying for the exam. Now that I am more than a month out from my exam, I find that the things I learned in preparation have been useful for my research, and I am glad to have invested the time to learn them.
+
+::: {.callout-note}
+## Coffee
+
+If you found this blog post helpful and would like to support my work, feel free to [buy me a coffee](https://buymeacoffee.com/findycang).
+:::
