@@ -8,6 +8,13 @@ website:
       - href: index.qmd
         text: home
       - blog.qmd
+    tools:
+      - icon: twitter
+        href: https://x.com/findycang
+      - icon: linkedin
+        href: https://www.linkedin.com/in/cindyfang1/
+      - icon: bluesky
+        href: https://bsky.app/profile/findycang.bsky.social
 
 format:
   html:
