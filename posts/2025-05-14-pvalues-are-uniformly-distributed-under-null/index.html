@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Cindy Fang">
+<meta name="dcterms.date" content="2025-05-14">
+<meta name="description" content="Understanding why p-values are uniformly distributed under the null hypothesis.">
 
-<title>blog – Cindy Fang</title>
+<title>P-values are uniformly distributed under the null hypothesis – Cindy Fang</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +23,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,35 +89,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -138,7 +130,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Cindy Fang</span>
     </a>
   </div>
@@ -149,11 +141,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">blog</span></a>
   </li>  
 </ul>
@@ -170,22 +162,50 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="hypothesis testing">hypothesis testing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="oral exam">oral exam <span class="quarto-category-count">(1)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="studying">studying <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">blog</h1>
+<h1 class="title">P-values are uniformly distributed under the null hypothesis</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">statistics</div>
+    <div class="quarto-category">hypothesis testing</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Understanding why p-values are uniformly distributed under the null hypothesis.
+  </div>
 </div>
 
-
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Cindy Fang </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Johns Hopkins Bloomberg School of Public Health
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 14, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -195,89 +215,38 @@ window.Quarto = {
 </header>
 
 
+<p>The distribution of p-values is an important part of hypothesis testing. In the field of genomics, we commonly assess the distribution of p-values when performing differential expression analyses in order to assess whether the data was modeled correctly. Under the null hypothesis, we expect to see a uniform distribution of p-values, and deviations from this would suggest model misspecification.</p>
+<p>Why is the distribution of p-values expected to be uniform under the null? Intuitively, this is clear, as under the null hypothesis there is no real effect so all values are equally likely to be observed. We can also verify this claim mathematically.</p>
+<p>First, let’s consider the test statistic we get from hypothesis testing <span class="math inline">\(T\)</span>, where <span class="math inline">\(T\)</span> is a continuous random variable. We can then define <span class="math inline">\(U = F_T(T)\)</span>, where <span class="math inline">\(F_T\)</span> is the cumulative distribution function (CDF) of <span class="math inline">\(T\)</span>. Assuming that there exists <span class="math inline">\(u \in [0,1]\)</span> such that <span class="math inline">\(u=F_T^{-1}(T)\)</span> exists, we can show that</p>
+<p><span class="math display">\[
+\begin{align}
+F_U(u) &amp;= P_U(U \leq u) \\
+        &amp;= P_U(F_T(T) \leq u) \\
+        &amp;= P_T(T \leq F_T^{-1}(u)) \\
+        &amp;= F_T(F_T^{-1}(u)) \\
+        &amp;= u.
+\end{align}
+\]</span></p>
+<p>This shows that <span class="math inline">\(U=F_T(T)\)</span> is uniformly distributed<span class="citation" data-cites="wiki:probability_integral_transform"><sup><a href="#ref-wiki:probability_integral_transform" role="doc-biblioref">1</a></sup></span>. Knowing that the CDF of test statistics are uniformly distributed, we can use a similar proof to show the same for the associated p-values. Consider the random variable <span class="math inline">\(V\)</span> representing the p-values. For the one-sided hypothesis test, the p-value is defined as <span class="math inline">\(P(T &gt; t_{obs} | H_0)\)</span> where <span class="math inline">\(H_0\)</span> denotes the null hypothesis. We can rewrite the p-value in terms of the CDF of <span class="math inline">\(T\)</span> because <span class="math inline">\(P(T &gt; t_{obs} | H_0) = 1 - F_T(t_{obs}) = 1 - U\)</span>. Then,</p>
+<p><span class="math display">\[
+\begin{align}
+F_V(v) &amp;= P_V(V \leq v)\\
+      &amp;= P_U(1 - U \leq v)\\
+      &amp;= P_U(U \geq 1-v)\\
+      &amp;= 1-P_U(1-v) = 1-(1-v)\\
+      &amp;= v,
+\end{align}
+\]</span> which shows that <span class="math inline">\(V\)</span> also follows a uniform distribution. Thus, p-values are uniformly distributed under the null hypothesis.</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="statistics,hypothesis testing" data-listing-date-sort="1747195200000" data-listing-file-modified-sort="1747244803914" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
-<div class="thumbnail">
-<p><a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external"></a></p><a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external"></a></p>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-wiki:probability_integral_transform" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Wikipedia. <span class="nocase">Probability integral transform</span> — <span>W</span>ikipedia<span>,</span> the free encyclopedia. (2025).</div>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external">P-values are uniformly distributed under the null hypothesis</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
-statistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('hypothesis testing'); return false;">
-hypothesis testing
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external">Understanding why p-values are uniformly distributed under the null hypothesis.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html" class="no-external">
-<div class="listing-date">
-May 14, 2025
-</div>
-<div class="listing-author">
-Cindy Fang
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="oral exam,studying" data-listing-date-sort="1740286800000" data-listing-file-modified-sort="1740584293126" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1296">
-<div class="thumbnail">
-<p><a href="./posts/2025-01-13-oral-exam/index.html" class="no-external"></a></p><a href="./posts/2025-01-13-oral-exam/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2025-01-13-oral-exam/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2025-01-13-oral-exam/index.html" class="no-external">Preliminary Oral Exam</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2025-01-13-oral-exam/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('oral exam'); return false;">
-oral exam
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('studying'); return false;">
-studying
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2025-01-13-oral-exam/index.html" class="no-external">My experience with the preliminary oral exam</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2025-01-13-oral-exam/index.html" class="no-external">
-<div class="listing-date">
-Feb 23, 2025
-</div>
-<div class="listing-author">
-Cindy Fang
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
