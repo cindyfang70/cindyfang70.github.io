@@ -20,7 +20,7 @@ The distribution of p-values is an important part of hypothesis testing. In the 
 
 Why is the distribution of p-values expected to be uniform under the null? Intuitively, this is clear, as under the null hypothesis there is no real effect so all values are equally likely to be observed. We can also verify this claim mathematically. 
 
-First, let's consider the test statistic we get from hypothesis testing $T$, where $T$ is a continuous random variable. We can then define $U = F_T(T)$, where $F_T$ is the cumulative distribution function (CDF) of $T$. Assuming that there exists $u \in [0,1]$ such that $u=F_T^{-1}(T)$ exists, we can show that
+First, let's consider the test statistic we get from hypothesis testing $T$, where $T$ is a continuous random variable. We can then define $U = F_T(T)$, where $F_T$ is the cumulative distribution function (CDF) of $T$. Assuming that there exists $u \in [0,1]$ such that $u=F_T^{-1}(T)$, we can show that
 
 
 $$ 
