@@ -1,0 +1,47 @@
+---
+title: "P-values are uniformly distributed under the null hypothesis"
+description: "Understanding why p-values are uniformly distributed under the null hypothesis."
+author:
+  - name: Cindy Fang
+    affiliation: Johns Hopkins Bloomberg School of Public Health
+date: 2025-05-14
+categories: [statistics, hypothesis testing]  
+draft: false
+format:
+  html:
+    math: mathjax
+    citation: false
+csl: nature.csl
+bibliography: pvalues_references.bib
+---
+
+
+The distribution of p-values is an important part of hypothesis testing. In the field of genomics, we commonly assess the distribution of p-values when performing differential expression analyses in order to assess whether the data was modeled correctly. Under the null hypothesis, we expect to see a uniform distribution of p-values, and deviations from this would suggest model misspecification. 
+
+Why is the distribution of p-values expected to be uniform under the null? Intuitively, this is clear, as under the null hypothesis there is no real effect so all values are equally likely to be observed. We can also verify this claim mathematically. 
+
+First, let's consider the test statistic we get from hypothesis testing $T$, where $T$ is a continuous random variable. We can then define $U = F_T(T)$, where $F_T$ is the cumulative distribution function (CDF) of $T$. Assuming that there exists $u \in [0,1]$ such that $u=F_T^{-1}(T)$ exists, we can show that
+
+
+$$ 
+\begin{align}
+F_U(u) &= P_U(U \leq u) \\
+        &= P_U(F_T(T) \leq u) \\
+        &= P_T(T \leq F_T^{-1}(u)) \\
+        &= F_T(F_T^{-1}(u)) \\
+        &= u.
+\end{align}
+$$ 
+
+This shows that $U=F_T(T)$ is uniformly distributed [@wiki:probability_integral_transform]. Knowing that the CDF of test statistics are uniformly distributed, we can use a similar proof to show the same for the associated p-values. Consider the random variable $V$ representing the p-values. For the one-sided hypothesis test, the p-value is defined as $P(T > t_{obs} | H_0)$ where $H_0$ denotes the null hypothesis. We can rewrite the p-value in terms of the CDF of $T$ because $P(T > t_{obs} | H_0) = 1 - F_T(t_{obs}) = 1 - U$. Then,
+
+$$ 
+\begin{align}
+F_V(v) &= P_V(V \leq v)\\
+      &= P_U(1 - U \leq v)\\
+      &= P_U(U \geq 1-v)\\
+      &= 1-P_U(1-v) = 1-(1-v)\\
+      &= v,
+\end{align}
+$$
+which shows that $V$ also follows a uniform distribution. Thus, p-values are uniformly distributed under the null hypothesis.
