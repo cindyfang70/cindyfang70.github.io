@@ -33,7 +33,9 @@ F_U(u) &= P_U(U \leq u) \\
 \end{align}
 $$ 
 
-This shows that $U=F_T(T)$ is uniformly distributed [@wiki:probability_integral_transform]. Knowing that the CDF of test statistics are uniformly distributed, we can use a similar proof to show the same for the associated p-values. Consider the random variable $V$ representing the p-values. For the one-sided hypothesis test, the p-value is defined as $P(T > t_{obs} | H_0)$ where $H_0$ denotes the null hypothesis. We can rewrite the p-value in terms of the CDF of $T$ because $P(T > t_{obs} | H_0) = 1 - F_T(t_{obs}) = 1 - U$. Then,
+This shows that $U=F_T(T)$ is uniformly distributed [@wiki:probability_integral_transform]. Knowing that the CDF of test statistics are uniformly distributed, we can use a similar proof to show the same for the associated p-values. 
+
+Consider the random variable $V$ representing the p-values. For the one-sided hypothesis test, the p-value is defined as $P(T > t_{obs} | H_0)$ where $H_0$ denotes the null hypothesis. We can rewrite the p-value in terms of the CDF of $T$ because $P(T > t_{obs} | H_0) = 1 - F_T(t_{obs}) = 1 - U$. Then,
 
 $$ 
 \begin{align}
