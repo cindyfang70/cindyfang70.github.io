@@ -1,5 +1,5 @@
 ---
-title: "Staging at a restaurant as a PhD student"
+title: "PhD Student by Day, Prep Cook by Night"
 description: "My experience working as a stage in an upscale seafood restaurant"
 author:
   - name: Cindy Fang
