@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/2025-08-02-staging/index.html",
       "/posts/2025-05-14-pvalues-are-uniformly-distributed-under-null/index.html",
       "/posts/2025-01-13-oral-exam/index.html"
     ]
